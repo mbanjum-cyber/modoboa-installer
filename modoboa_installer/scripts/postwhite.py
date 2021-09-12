@@ -42,7 +42,7 @@ class Postwhite(base.Installer):
 
     def post_run(self):
         """Additionnal tasks."""
-        install_dir = "/srv"
+        install_dir = "/usr/local/bin/"
         self.install_from_archive(SPF_TOOLS_REPOSITORY, install_dir)
         postw_dir = self.install_from_archive(
             POSTWHITE_REPOSITORY, install_dir)
