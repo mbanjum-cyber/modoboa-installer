@@ -96,7 +96,7 @@ class Modoboa(base.Installer):
             modoboa_package, self.venv_path,
             upgrade=self.upgrade, binary=False, sudo_user=self.user)
         if self.dbengine == "postgres":
-            packages.append("psycopg2-binary")
+            packages.append("psycopg2-binary==2.8.6")
         else:
             packages.append("mysqlclient")
         if sys.version_info.major == 2 and sys.version_info.micro < 9:
